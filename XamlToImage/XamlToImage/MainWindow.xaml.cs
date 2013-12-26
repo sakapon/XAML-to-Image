@@ -23,6 +23,28 @@ namespace XamlToImage
         public MainWindow()
         {
             InitializeComponent();
+
+            Loaded += MainWindow_Loaded;
+        }
+
+        void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var args = new BitmapMakerArgs
+                {
+                    Element = MainCanvas,
+                    FileName = FileNameText.Text,
+                    CreateBlackVersion = CreateBlackCheck.IsChecked == true,
+                    ImageSizes = ImageSizeList.Items.OfType<Size>().ToArray(),
+                };
+                BitmapMaker.Start(args);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "XAML to Image");
+                Close();
+            }
         }
     }
 }
