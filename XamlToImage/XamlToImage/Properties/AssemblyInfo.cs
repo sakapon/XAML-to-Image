@@ -7,12 +7,12 @@ using System.Windows;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("XamlToImage")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("XAML to Image")]
+[assembly: AssemblyDescription("Convert XAML to image files.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("XamlToImage")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCompany("Keiho Sakapon")]
+[assembly: AssemblyProduct("XAML to Image")]
+[assembly: AssemblyCopyright("© 2013 Keiho Sakapon.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
