@@ -1,6 +1,8 @@
-﻿<Window x:Class="XamlToImage.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        x:Class="XamlToImage.MainWindow"
         Title="XAML to Image" Height="600" Width="900" FontSize="14">
 	<Canvas>
 		<Grid Canvas.Left="20" Canvas.Top="20">
