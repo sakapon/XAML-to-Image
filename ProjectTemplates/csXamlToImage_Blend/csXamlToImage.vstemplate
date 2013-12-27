@@ -2,33 +2,35 @@
   <TemplateData>
     <Name _locID="BLEND_ProjectName">XAML to Image</Name>
     <Description _locID="BLEND_ProjectDescription">Convert XAML to image files.</Description>
+    <Icon>__TemplateIcon.png</Icon>
+    <TemplateID>Keiho.Tools.XamlToImage</TemplateID>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>WPF</ProjectSubType>
-    <TemplateGroupID>WPF</TemplateGroupID>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>XamlToImage</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
-    <LocationField>Enabled</LocationField>
+    <PromptForSaveOnCreation>false</PromptForSaveOnCreation>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-    <Icon>__TemplateIcon.png</Icon>
+    <CreateInPlace>false</CreateInPlace>
+    <TemplateGroupID>WPF</TemplateGroupID>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="XamlToImage.csproj" File="XamlToImage.csproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="BitmapMaker.cs">BitmapMaker.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="BitmapUtility.cs">BitmapUtility.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="MainWindow.xaml">MainWindow.xaml</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="MainWindow.xaml.cs">MainWindow.xaml.cs</ProjectItem>
-      <Folder Name="Properties" TargetFolderName="Properties">
-        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.settings">Settings.settings</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.Designer.cs">Settings.Designer.cs</ProjectItem>
-      </Folder>
+    <Project File="XamlToImage.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Resources.resx">Resources.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Properties\Settings.settings">Settings.settings</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\Settings.Designer.cs">Settings.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" SubType="Code">MainWindow.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="10">MainWindow.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" SubType="Code">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">BitmapMaker.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">BitmapUtility.cs</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>
