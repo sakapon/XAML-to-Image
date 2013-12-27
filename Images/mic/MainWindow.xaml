@@ -1,0 +1,38 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        x:Class="XamlToImage.MainWindow"
+        Title="XAML to Image" Height="600" Width="900" FontSize="14">
+	<Canvas>
+		<Grid Canvas.Left="20" Canvas.Top="20">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="120"/>
+				<ColumnDefinition Width="160"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<TextBlock Text="File name:" VerticalAlignment="Center"/>
+			<TextBox x:Name="FileNameText" VerticalContentAlignment="Center" Height="24" Grid.Column="1" Text="mic.png"/>
+			<TextBlock Text="Black version:" VerticalAlignment="Center" Grid.Row="1"/>
+			<CheckBox x:Name="CreateBlackCheck" VerticalContentAlignment="Center" Height="24" Grid.Row="1" Grid.Column="1" IsChecked="True"/>
+			<TextBlock Text="Image sizes:" VerticalAlignment="Center" Grid.Row="2"/>
+			<ListBox x:Name="ImageSizeList" Grid.Row="2" Grid.Column="1">
+				<Size>76,76</Size>
+				<Size>150,150</Size>
+				<Size>300,300</Size>
+			</ListBox>
+		</Grid>
+		<Border Width="400" Height="400" Background="Black" Canvas.Left="400" Canvas.Top="80">
+			<Canvas x:Name="MainCanvas">
+				<Rectangle Fill="White" Height="135" Canvas.Left="168" StrokeThickness="0" Canvas.Top="80" Width="64" RadiusY="32" RadiusX="32"/>
+				<Path Data="M0,0 L24,0 C24,28.166519 46.833477,51 75,51 103.16652,51 126,28.166519 126,0 L150,0 C150,41.421356 116.42136,75 75,75 33.578644,75 0,41.421356 0,0 z" Fill="White" Height="75" Stretch="Fill" StrokeThickness="0" Canvas.Top="182" Width="150" Canvas.Left="125"/>
+				<Rectangle Fill="White" Height="60" StrokeThickness="0" Width="24" Canvas.Left="188" Canvas.Top="245"/>
+				<Rectangle Fill="White" Height="24" StrokeThickness="0" Width="180" Canvas.Left="110" Canvas.Top="296"/>
+			</Canvas>
+		</Border>
+	</Canvas>
+</Window>
