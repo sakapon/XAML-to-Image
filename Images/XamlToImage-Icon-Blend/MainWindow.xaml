@@ -1,0 +1,38 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        x:Class="XamlToImage.MainWindow"
+        Title="XAML to Image" Height="600" Width="900" FontSize="14">
+	<Canvas>
+		<Grid Canvas.Left="20" Canvas.Top="20">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="120"/>
+				<ColumnDefinition Width="160"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<TextBlock Text="File name:" VerticalAlignment="Center"/>
+			<TextBox x:Name="FileNameText" VerticalContentAlignment="Center" Height="24" Grid.Column="1" Text="XamlToImage-Icon-Blend.png"/>
+			<TextBlock Text="Black version:" VerticalAlignment="Center" Grid.Row="1"/>
+			<CheckBox x:Name="CreateBlackCheck" VerticalContentAlignment="Center" Height="24" Grid.Row="1" Grid.Column="1"/>
+			<TextBlock Text="Image sizes:" VerticalAlignment="Center" Grid.Row="2"/>
+			<ListBox x:Name="ImageSizeList" Grid.Row="2" Grid.Column="1">
+				<Size>32,32</Size>
+				<Size>64,64</Size>
+			</ListBox>
+		</Grid>
+		<Border Width="400" Height="400" Background="Black" Canvas.Left="400" Canvas.Top="80">
+			<Canvas x:Name="MainCanvas">
+				<Rectangle Fill="#FFCCCCCC" Height="110" StrokeThickness="0" Width="340" Canvas.Left="60"/>
+				<Rectangle Fill="#FFCCCCCC" Height="300" StrokeThickness="0" Width="400" Canvas.Top="100"/>
+				<TextBlock Text="XAML" Canvas.Left="81" FontSize="100" FontWeight="Bold"/>
+				<ed:RegularPolygon Fill="#FF333333" Height="210" PointCount="3" StrokeThickness="0" Width="210" Canvas.Left="40" Canvas.Top="150"/>
+				<Ellipse Fill="#FF333333" Height="130" StrokeThickness="0" Width="130" Canvas.Left="220" Canvas.Top="150"/>
+			</Canvas>
+		</Border>
+	</Canvas>
+</Window>
