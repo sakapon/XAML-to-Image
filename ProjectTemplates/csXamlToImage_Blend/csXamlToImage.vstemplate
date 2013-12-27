@@ -1,8 +1,10 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>XAML to Image</Name>
-    <Description>Convert XAML to image files.</Description>
+    <Name _locID="BLEND_ProjectName">XAML to Image</Name>
+    <Description _locID="BLEND_ProjectDescription">Convert XAML to image files.</Description>
     <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>WPF</ProjectSubType>
+    <TemplateGroupID>WPF</TemplateGroupID>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>XamlToImage</DefaultName>
@@ -10,7 +12,6 @@
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <Icon>__TemplateIcon.png</Icon>
-    <PreviewImage>__PreviewImage.png</PreviewImage>
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="XamlToImage.csproj" File="XamlToImage.csproj" ReplaceParameters="true">
