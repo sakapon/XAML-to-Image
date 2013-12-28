@@ -18,3 +18,6 @@ See [Setup](https://github.com/sakapon/XAML-to-Image/wiki/Setup).
 ### Tutorials
 * [First Steps](https://github.com/sakapon/XAML-to-Image/wiki/First-Steps)
 * [Usage](https://github.com/sakapon/XAML-to-Image/wiki/Usage)
+
+### Extensibility
+You can customize this template to suit your needs, such as file naming rules or adding dynamic image effects, etc.
