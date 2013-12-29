@@ -3,10 +3,14 @@
 "XAML to Image" is a set of project templates for Blend for Visual Studio and/or Visual Studio.
 By using the templates, you can design images or icons as XAML, and export image files such as PNG, GIF, etc.
 
-1. Edit XAML with Blend for Visual Studio.
-  ![XAML to Image 1](Images/Preview/Blend-mic.png)
-1. Run the app, so image files are created.
-  ![XAML to Image 2](Images/Preview/Output-mic.png)
+1. Edit XAML with Blend for Visual Studio.  
+  ![Blend-mic](Images/Preview/Blend-mic.png)
+1. Run the app, then image files are created.  
+  ![Output-mic](Images/Preview/Output-mic.png)
+
+Other samples:  
+![Blend-Slimeknight](Images/Preview/Blend-Slimeknight.png)  
+![Output-Slimeknight](Images/Preview/Output-Slimeknight.png)
 
 ### Prerequisites
 Visual Studio 2012, or later.  
