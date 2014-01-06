@@ -16,20 +16,23 @@
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 			<TextBlock Text="File name:" VerticalAlignment="Center"/>
-			<TextBox x:Name="FileNameText" VerticalContentAlignment="Center" Height="24" Grid.Column="1" Text="image1.png"/>
+			<TextBox x:Name="FileNameText" VerticalContentAlignment="Center" Height="24" Grid.Column="1" Text="Slimeknight-Warrior.png"/>
 			<TextBlock Text="Black version:" VerticalAlignment="Center" Grid.Row="1"/>
-			<CheckBox x:Name="CreateBlackCheck" VerticalContentAlignment="Center" Height="24" Grid.Row="1" Grid.Column="1" IsChecked="True"/>
+			<CheckBox x:Name="CreateBlackCheck" VerticalContentAlignment="Center" Height="24" Grid.Row="1" Grid.Column="1"/>
 			<TextBlock Text="Image sizes:" VerticalAlignment="Center" Grid.Row="2"/>
 			<ListBox x:Name="ImageSizeList" Grid.Row="2" Grid.Column="1">
 				<Size>76,76</Size>
 				<Size>150,150</Size>
-				<Size>300,300</Size>
 			</ListBox>
 		</Grid>
-		<Border Width="400" Height="400" Background="Black" Canvas.Left="400" Canvas.Top="80">
-			<Canvas x:Name="MainCanvas">
-				<Rectangle Fill="White" Height="160" Canvas.Left="110" StrokeThickness="0" Canvas.Top="150" Width="120"/>
-				<Path Data="M0,0 L120,0 120,160 80,160 80,30 0,30 z" Fill="White" Height="160" Canvas.Left="170" Stretch="Fill" StrokeThickness="0" Canvas.Top="105" Width="120"/>
+		<Border Width="300" Height="300" Background="Black" Canvas.Left="400" Canvas.Top="80">
+			<Canvas x:Name="MainCanvas" Background="White">
+				<Image Source="Slimeknight.jpg" Canvas.Left="20" Canvas.Top="10"/>
+				<Ellipse Fill="#FFAAAAAA" Height="120" StrokeThickness="0" Width="120"/>
+				<Ellipse Height="100" StrokeThickness="4" Width="100" Stroke="#FF333333" Canvas.Left="10" Canvas.Top="10"/>
+				<Viewbox Canvas.Left="18" Canvas.Top="12" Stretch="Fill" Width="84" Height="96">
+					<TextBlock Text="戦" FontSize="96" FontFamily="MS PMincho" FontWeight="Bold" Foreground="White" TextOptions.TextHintingMode="Animated"/>
+				</Viewbox>
 			</Canvas>
 		</Border>
 	</Canvas>
