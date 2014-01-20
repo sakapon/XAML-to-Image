@@ -41,6 +41,18 @@ namespace $safeprojectname$
 
         public static void SaveImage(string filePath, BitmapSource bitmap)
         {
+            if (Path.GetExtension(filePath).ToLowerInvariant() == ".ico")
+            {
+                SaveIcon(filePath, bitmap);
+            }
+            else
+            {
+                SaveImageExceptIcon(filePath, bitmap);
+            }
+        }
+
+        public static void SaveImageExceptIcon(string filePath, BitmapSource bitmap)
+        {
             var fullPath = Path.GetFullPath(filePath);
 
             var encoder = CreateBitmapEncoder(fullPath);
@@ -52,8 +64,29 @@ namespace $safeprojectname$
             }
         }
 
+        public static void SaveIcon(string filePath, BitmapSource bitmap)
+        {
+            using (var input = ToStream(bitmap))
+            {
+                IconUtility.SaveIcon(input, filePath);
+            }
+        }
+
+        public static Stream ToStream(BitmapSource bitmap)
+        {
+            var memory = new MemoryStream();
+
+            var encoder = new BmpBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(bitmap));
+            encoder.Save(memory);
+
+            return memory;
+        }
+
         static BitmapEncoder CreateBitmapEncoder(string filePath)
         {
+            // To inherit BitmapEncoder class, internal SealObject method must be overrided.
+            // So, we can not create IcoBitmapEncoder class which inherits BitmapEncoder class in custom libraries.
             switch (Path.GetExtension(filePath).ToLowerInvariant())
             {
                 case ".bmp":

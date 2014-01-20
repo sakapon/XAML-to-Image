@@ -30,6 +30,7 @@
       <ProjectItem ReplaceParameters="true">App.config</ProjectItem>
       <ProjectItem ReplaceParameters="true">BitmapMaker.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">BitmapUtility.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">IconUtility.cs</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>
