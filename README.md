@@ -12,9 +12,10 @@ Other samples:
 ![Blend-Slimeknight](Images/Preview/Blend-Slimeknight.png)  
 ![Output-Slimeknight](Images/Preview/Output-Slimeknight.png)
 
-### Prerequisites
-Visual Studio 2012, or later.  
-(I tested with Visual Studio 2012 only.)
+### System Requirements
+- Visual Studio 2012, 2013, 2015 and 2017
+- Blend for Visual Studio 2012 and 2013
+  - Blend for Visual Studio 2015 (or later) does not have `Blend\ProjectTemplates` folder.
 
 ### Setup
 See [Setup](https://github.com/sakapon/XAML-to-Image/wiki/Setup).
